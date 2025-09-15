@@ -1,11 +1,7 @@
-﻿// src/app/layout.tsx
-import type { Metadata } from "next";
-import "./globals.css";
-import { Inter } from "next/font/google";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-
-const inter = Inter({ subsets: ["latin"], display: "swap" });
+﻿import type { Metadata } from "next"
+import "./globals.css"
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 
 export const metadata: Metadata = {
   title: "Nikhileswar Reddy Chirra — Portfolio",
@@ -25,7 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Navbar />
         {children}
         <Footer />

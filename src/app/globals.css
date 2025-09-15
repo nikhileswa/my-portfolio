@@ -1,26 +1,19 @@
-@import "tailwindcss";
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+:root { color-scheme: light dark; }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+html, body { height: 100%; }
+body { @apply bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+.container { @apply mx-auto max-w-6xl px-4; }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+.section { @apply py-16 sm:py-20; }
+.section-title { @apply text-3xl sm:text-4xl font-bold tracking-tight; }
+.section-sub { @apply mt-2 text-gray-600 dark:text-gray-400; }
+
+.card { @apply rounded-2xl border border-gray-200/60 dark:border-gray-800/60 bg-white/60 dark:bg-gray-900/60 shadow-soft backdrop-blur; }
+.badge { @apply inline-flex items-center rounded-full border border-gray-200/60 dark:border-gray-800/60 px-3 py-1 text-xs; }
+
+a { @apply underline-offset-2 decoration-brand-500 hover:underline; }

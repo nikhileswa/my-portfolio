@@ -8,11 +8,11 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Nikhileswar Reddy Chirra â€” Portfolio",
-  description: "Data Analyst â€¢ Data Engineer â€¢ BI Developer",
+  title: "Nikhileswar Reddy Chirra — Portfolio",
+  description: "Data Analyst • Data Engineer • BI Developer",
   openGraph: {
-    title: "Nikhileswar Reddy Chirra â€” Portfolio",
-    description: "Data Analyst â€¢ Data Engineer â€¢ BI Developer",
+    title: "Nikhileswar Reddy Chirra — Portfolio",
+    description: "Data Analyst • Data Engineer • BI Developer",
     url: "https://your-portfolio-domain.vercel.app",
     siteName: "Nikhileswar Portfolio",
     images: ["/og.png"],

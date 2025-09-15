@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import Section from "@/components/Section";
 import { Github, Linkedin, Mail } from "lucide-react";
 
+
 const Scene = dynamic(() => import("@/components/Scene"), { ssr: false });
 
 export default function Hero({

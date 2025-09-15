@@ -1,94 +1,83 @@
 // src/content/data.ts
+import type { Project } from "@/components/ProjectCard";
+import type { ExperienceItem } from "@/components/Experience";
+import type { EducationItem } from "@/components/Education";
+
 export const profile = {
   name: "Nikhileswar Reddy Chirra",
   title: "Data Analyst • Data Engineer • BI Developer",
-  location: "San Antonio, TX",
-  email: "nikhileshwar124@gmail.com",
-  phone: "+1-726-437-8667",
-  linkedin: "https://www.linkedin.com/in/nikhileswar-reddy-5a14011a3/",
-  github: "",
+  summary:
+    "Hands-on with SQL, Python, Power BI/Tableau, ETL pipelines, and cloud data warehousing. Passionate about turning messy data into business impact.",
+  email: "you@example.com",
+  linkedin: "https://www.linkedin.com/in/your-handle",
+  github: "https://github.com/your-handle",
 };
 
-export const skills = [
-  "Python","SQL","Power BI","Tableau","TensorFlow","Keras","Pandas","NumPy",
-  "AWS (S3, Lambda)","Azure (storage/refresh)","Airflow","ETL Pipelines",
-  "Scikit-learn","Matplotlib","Seaborn","Excel (Power Query)","SAS","BigQuery",
-  "FastAPI/Flask","Git","JIRA","Visio","Lucidchart"
+export const skills: string[] = [
+  "Python", "SQL", "Power BI", "Tableau",
+  "Pandas", "NumPy", "Airflow", "dbt",
+  "Azure", "AWS", "Snowflake", "Databricks",
 ];
 
-export const projects = [
+export const projects: Project[] = [
   {
-    title: "NLP-Driven Multi-Label Satellite Image Classifier",
-    stack: ["Python","SQL","Flask","TensorFlow","Keras","Pandas","Matplotlib"],
+    title: "Sales Insights Dashboard",
+    stack: ["Power BI", "DAX", "SQL"],
     highlights: [
-      "EDA + CV on 4,000+ satellite images with SQL-backed experiments",
-      "Improved performance via architecture + training tweaks; visualized dataset health"
+      "Modeled star schema, built drill-through views",
+      "Automated daily refresh using gateway",
     ],
-    link: "#",
-    image: "/projects/project-1.png",
+    link: "https://github.com/your-handle/sales-insights",
+    image: "/projects/project-1.png"
   },
   {
-    title: "Optimized E-Commerce Sales Performance",
-    stack: ["Python","SQL","Tableau","Power BI"],
+    title: "Customer Churn Prediction",
+    stack: ["Python", "Scikit-learn", "Pandas"],
     highlights: [
-      "Unified sales/customer/web data into real-time KPI dashboards",
-      "A/B pricing tests raised CLV by ~18%; +10% revenue in key lines"
+      "Feature engineered 25+ signals; ROC-AUC ↑ to 0.89",
+      "Built inference notebook & report",
     ],
-    link: "#",
-    image: "/projects/project-2.png",
+    link: "https://github.com/your-handle/churn-model",
+    image: "/projects/project-2.png"
   },
   {
-    title: "Real-Time KPI Monitoring & Anomaly Detection",
-    stack: ["Power BI","Python","Power Automate","Scikit-learn","Azure","Teams"],
+    title: "ELT with dbt + Snowflake",
+    stack: ["dbt", "Snowflake", "SQL"],
     highlights: [
-      "2-minute refresh for 50K+ daily transactions during peaks",
-      ">10% failure spikes & ~15% revenue dips flagged in ~5 minutes"
+      "Sources → models → marts with tests & docs",
+      "CI on pull requests with slim CI",
     ],
-    link: "#",
-    image: "/projects/project-3.png",
+    link: "https://github.com/your-handle/elt-starter",
+    image: "/projects/project-3.png"
   }
 ];
 
-export const experience = [
+export const experience: ExperienceItem[] = [
   {
-    company: "Oriana Information Technologies",
+    company: "Company A",
     role: "Data Analyst",
-    period: "Jun 2022 – May 2023",
+    period: "2023 – Present",
     bullets: [
-      "Built 99.2% accurate CNN for satellite imagery; handled class imbalance",
-      "Power BI/Tableau KPIs (98.5% precision, 97.8% recall) and cut geo-bias ~30%",
-      "ETL on AWS S3/Lambda with controls for auditability; +40% pipeline efficiency",
+      "Owned KPI reporting; cut manual work by 60%",
+      "Built reusable SQL models and BI templates"
     ],
   },
   {
-    company: "Sciffer Analytics",
+    company: "Company B",
     role: "Data Engineer Intern",
-    period: "Mar 2022 – Sep 2022",
+    period: "2022 – 2023",
     bullets: [
-      "Data augmentation +50% training volume; +15% model performance (semi-supervised)",
-      "Custom CNN: 92% accuracy; 500 imgs/sec inference",
-    ],
-  },
-  {
-    company: "The SPARKS Foundation",
-    role: "Data Science Intern",
-    period: "Oct 2020 – Jan 2021",
-    bullets: [
-      "K-Means/DBSCAN on 12k+ records → segments that lifted conversions ~15%",
-      "Transformed 30k+ XML docs for ML; CV + F1 up ~15% via tuning",
+      "Ingested APIs to lakehouse; scheduled with Airflow",
+      "Implemented PII tokenization and quality checks"
     ],
   },
 ];
 
-export const education = [
+export const education: EducationItem[] = [
   {
-    school: "Webster University",
-    degree: "M.S. Information Technology & Management",
-    period: "Aug 2023 – Mar 2025",
-  },
-  {
-    school: "VIT University",
-    degree: "B.Tech Computer Science (Data Analytics)",
-    period: "Jul 2019 – May 2023",
+    school: "Your University",
+    degree: "B.S., Computer Science",
+    period: "2019 – 2023",
+    bullets: ["Graduated with honors", "Data science specialization"],
   },
 ];
